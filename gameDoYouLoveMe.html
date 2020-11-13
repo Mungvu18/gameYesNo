@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #no{
+            position: absolute;
+            /*lấy giá trị tuyệt đối dùng absolue*/
+            left: 100px;
+            top: 100px;
+        }
+    </style>
+</head>
+<body>
+<h2>Do you love me?</h2>
+<input type="button" value="yes" onclick="showYes()">
+<input type="button" value="no" onmousemove="showNo()" id="no">
+</body>
+<script>
+    // quản lý tọa độ bên CSS là thuộc tính position
+    function  showYes(){
+        alert(ok)
+    }
+    // xác đinh vị trí ban đâu
+    // dung code js tác động vào css với cách dùng .style.thuoctinhcuaCss
+    // quy tắc sử dụng  thuộc tính trong css element.style.thuoctinhCss
+    // note thuộc tính css:
+    // + bỏ dấu gạch ngang
+    // + chữ cái sau dấu gạch ngang được chuyển thành chữ hoa
+    // vd C1020G đang ở màu đen kích sự kiện chuột chyển màu đỏ
+    // document.getElenmentById('class').style.color = 'red';
+    // nhưng nếu chuyển màu nền mà dùng thuộc tính background -color thì dùng cú pháp sau
+    // document.getElementById('class').style.backgroundColor = "red";
+    function showNo(){
+        let topValue = Math.floor(Math.random()*window.innerHeight);
+        let leftValue = Math.floor(Math.random()*window.innerWidth);
+        document.getElementById('no').style.left = leftValue +"px";
+        document.getElementById('no').style.top = topValue +"px";
+    }
+</script>
+</html>
